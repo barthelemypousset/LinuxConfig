@@ -1,0 +1,15 @@
+startup_message       off             # default: on
+caption always "%{=b dy}%D, %d. %M '%y %{=b dw}%c:%s %{=b dy}{ %{= dg}${USER}@%{= dr}%H %{=b dy}} %{=b d2}%l %{=b dy}%u %{=b dy} %={ %?%{= dc}%-Lw%?%{+b dy}(%{-b r}%n:%t%{+b dy})%?(%u)%?%{-dc}%?%{= dc}%+Lw%? %{=b dy}}"
+
+escape ^Ww
+
+bind R eval "source $HOME/.screenrc" "echo '.screenrc reloaded!'"
+
+bind - eval "split" "focus down" "screen"
+bind | eval "split -v" "focus right" "screen"
+bind x eval "remove"
+
+bindkey ^J "focus down"
+bindkey ^K "focus up"
+bindkey ^H "focus left"
+bindkey ^L "focus right"
